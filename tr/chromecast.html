@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chromecast ile TV&#x27;ye Yayın Gönderme ve Sorun Giderme — drL IPTV Player</title>
+  <meta name="description" content="drL IPTV Player ile canlı TV, film ve dizileri Chromecast ve Google TV cihazlarına aktarma adımları ve bağlantı sorunlarını giderme rehberi.">
+  <link rel="canonical" href="https://dereliapps.github.io/tr/chromecast.html">
+  <link rel="alternate" hreflang="tr" href="https://dereliapps.github.io/tr/chromecast.html">
+  <link rel="alternate" hreflang="en" href="https://dereliapps.github.io/en/chromecast.html">
+  <link rel="alternate" hreflang="de" href="https://dereliapps.github.io/de/chromecast.html">
+  <link rel="alternate" hreflang="es" href="https://dereliapps.github.io/es/chromecast.html">
+  <link rel="alternate" hreflang="fr" href="https://dereliapps.github.io/fr/chromecast.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://dereliapps.github.io/pt-br/chromecast.html">
+  <link rel="alternate" hreflang="x-default" href="https://dereliapps.github.io/tr/chromecast.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="drL IPTV Player">
+  <meta property="og:title" content="Chromecast ile TV&#x27;ye Yayın Gönderme ve Sorun Giderme — drL IPTV Player">
+  <meta property="og:description" content="drL IPTV Player ile canlı TV, film ve dizileri Chromecast ve Google TV cihazlarına aktarma adımları ve bağlantı sorunlarını giderme rehberi.">
+  <meta property="og:url" content="https://dereliapps.github.io/tr/chromecast.html">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="drL IPTV Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chromecast ile TV&#x27;ye Yayın Gönderme ve Sorun Giderme — drL IPTV Player">
+  <meta name="twitter:description" content="drL IPTV Player ile canlı TV, film ve dizileri Chromecast ve Google TV cihazlarına aktarma adımları ve bağlantı sorunlarını giderme rehberi.">
+  <meta name="twitter:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dereliapps.github.io/#organization",
+      "name": "drL Yazılım",
+      "url": "https://dereliapps.github.io/tr/index.html",
+      "email": "dereliticaret61@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dereliapps.github.io/assets/img/icon_512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dereliapps.github.io/#app",
+      "name": "drL IPTV Player",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "identifier": "com.drl.iptvplayer",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "featureList": "M3U, Xtream Codes, QR TV Pairing, Chromecast, EPG, Parental Control PIN, Picture-in-Picture, Multi-Profile, Lite Mode",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional in-app Premium subscription via Google Play"
+      },
+      "publisher": {
+        "@id": "https://dereliapps.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dereliapps.github.io/tr/chromecast.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://dereliapps.github.io/tr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chromecast",
+          "item": "https://dereliapps.github.io/tr/chromecast.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dereliapps.github.io/tr/chromecast.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Chromecast için yerel ağ izni neden gereklidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yerel ağ ve çoklu yayın (multicast) izni yalnızca aynı Wi-Fi ağındaki Cast destekli televizyonları bulmak ve yayını aktarmak için kullanılır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cihaz bulunamadığında IP adresiyle bağlanabilir miyim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. Chromecast ekranının alt kısmındaki alana televizyonunuzun yerel IP adresini yazarak doğrudan bağlantı kurabilirsiniz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bağlantıyı kestiğimde TV'deki oynatıcı kapanır mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. Uygulama üzerinden bağlantıyı sonlandırdığınızda televizyondaki Cast alıcı oturumu da düzgün biçimde kapatılır."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Tema Değiştir">
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+  <div class="legal-top-bar" role="region" aria-label="Yasal Uyarı">
+    <div class="container">
+      <div><span class="legal-badge">Yasal Uyarı</span> drL IPTV Player hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz; yalnızca kendi yasal kaynağınızı (M3U veya Xtream Codes) oynatır.</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <picture>
+          <source srcset="../assets/img/icon_512.webp" type="image/webp">
+          <img src="../assets/img/icon_512.png" width="40" height="40" alt="drL IPTV Player Logo">
+        </picture>
+        <span>drL IPTV Player</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="nasil-kurulur.html">Nasıl Kurulur?</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR ile TV Eşleştirme</a></li>
+            <li><a href="chromecast.html" aria-current="page">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">M3U Nedir?</a></li>
+            <li><a href="xtream-codes-nedir.html">Xtream Codes Nedir?</a></li>
+            <li><a href="sss.html">SSS</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Language Switcher">
+            <a href="../tr/chromecast.html" hreflang="tr" aria-current="true">TR</a>
+            <a href="../en/chromecast.html" hreflang="en">EN</a>
+            <a href="../de/chromecast.html" hreflang="de">DE</a>
+            <a href="../es/chromecast.html" hreflang="es">ES</a>
+            <a href="../fr/chromecast.html" hreflang="fr">FR</a>
+            <a href="../pt-br/chromecast.html" hreflang="pt-BR">PT-BR</a>
+        </div>
+        <label for="theme-toggle" class="theme-toggle-label">Tema Değiştir</label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Ana Sayfa</a></li><li><span aria-current="page">Chromecast</span></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" class="container">
+
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Chromecast ile Yayın Gönderme ve Sorun Giderme Rehberi</h1>
+              <p class="geo-lead">drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV&#x27;de oynatan modern bir medya oynatıcıdır; uygulama hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz. Aynı Wi-Fi ağındaki Chromecast ve Google Cast destekli televizyonları otomatik olarak bularak canlı yayınları ve videoları tek dokunuşla büyük ekrana aktarabilirsiniz.</p>
+              <div class="cta-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play&#x27;den İndir</a>
+              </div>
+            </div>
+            <div>
+              <figure class="screenshot-card"><picture><source srcset="../assets/img/4_chromecast.webp" type="image/webp"><img src="../assets/img/4_chromecast.png" width="1600" height="900" alt="Chromecast bağlantısı: Aynı Wi-Fi ağındaki Cast destekli TV&#x27;lere tek dokunuşla yayın aktarma." loading="eager"></picture><figcaption>Chromecast bağlantısı: Aynı Wi-Fi ağındaki Cast destekli TV&#x27;lere tek dokunuşla yayın aktarma.</figcaption></figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Chromecast ile televizyona yayın adım adım nasıl gönderilir?</h2>
+          <ol class="steps-list">
+        
+<li>Android telefonunuzu veya tabletinizi Chromecast ya da Google TV cihazınızla aynı Wi-Fi ağına bağlayın.</li>
+<li>drL IPTV Player içinde izlemek istediğiniz canlı kanalı, filmi veya diziyi açın ya da üst menüdeki &#x27;Yansıt (Cast)&#x27; simgesine dokunun.</li>
+<li>&#x27;Chromecast&#x27; sekmesinde otomatik olarak listelenen cihazlar arasından televizyonunuzu (örneğin Smart TV) seçin.</li>
+<li>Cihaz otomatik listede görünmezse TV&#x27;nin yerel IP adresini (TV Ayarları &gt; Ağ menüsünden öğrenerek) manuel bağlantı kutusuna yazıp &#x27;Bağlan&#x27; düğmesine dokunun.</li>
+<li>Bağlantı kurulduğunda yayın TV ekranında başlar; oynatma, duraklatma ve ses kontrolünü telefonunuzdan sürdürebilirsiniz.</li>
+
+          </ol>
+        </section>
+
+        <section>
+          <h2>Chromecast bağlantı veya oynatma sorunları nasıl çözülür?</h2>
+          <div class="card-grid">
+        
+<article class="card"><h3>Cihaz listede görünmüyor</h3><p>Telefon ve TV&#x27;nin aynı Wi-Fi bandında (2.4 GHz / 5 GHz köprülü) olduğundan ve VPN&#x27;in kapalı olduğundan emin olun. Gerekirse &#x27;Yeniden Tara&#x27; düğmesini veya manuel IP ile bağlanma özelliğini kullanın.</p></article>
+<article class="card"><h3>Yayın yükleniyor ama açılmıyor (CORS / HLS)</h3><p>drL IPTV Player, standart CORS başlığı vermeyen IPTV sunucuları için yerleşik bir yerel vekil (proxy) akışı kullanır. Yayının telefon ekranında normal oynadığından emin olduktan sonra Cast işlemini başlatın.</p></article>
+<article class="card"><h3>Alternatif olarak Ekran Yansıtma</h3><p>Televizyonunuzda Google Cast desteği yoksa &#x27;TV Bağlantısı &gt; Ekran Yansıt&#x27; sekmesinden Android sistem ekran yansıtma (Miracast / Smart View) menüsünü açabilirsiniz.</p></article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>Chromecast kullanımı hakkında sıkça sorulan sorular nelerdir?</h2>
+          <div class="faq-list">
+        
+<article class="faq-item"><h3>Chromecast için yerel ağ izni neden gereklidir?</h3><p>Yerel ağ ve çoklu yayın (multicast) izni yalnızca aynı Wi-Fi ağındaki Cast destekli televizyonları bulmak ve yayını aktarmak için kullanılır.</p></article>
+<article class="faq-item"><h3>Cihaz bulunamadığında IP adresiyle bağlanabilir miyim?</h3><p>Evet. Chromecast ekranının alt kısmındaki alana televizyonunuzun yerel IP adresini yazarak doğrudan bağlantı kurabilirsiniz.</p></article>
+<article class="faq-item"><h3>Bağlantıyı kestiğimde TV&#x27;deki oynatıcı kapanır mı?</h3><p>Evet. Uygulama üzerinden bağlantıyı sonlandırdığınızda televizyondaki Cast alıcı oturumu da düzgün biçimde kapatılır.</p></article>
+</div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">drL IPTV Player</p>
+          <p>drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV&#x27;de oynatan modern bir medya oynatıcıdır; uygulama hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz.</p>
+        </div>
+        <div>
+          <p class="footer-title">Ürün ve Rehberler</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="nasil-kurulur.html">Nasıl Kurulur?</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR ile TV Eşleştirme</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">M3U Nedir?</a></li>
+            <li><a href="xtream-codes-nedir.html">Xtream Codes Nedir?</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Kurumsal ve Yasal</p>
+          <ul class="footer-links">
+            <li><a href="sss.html">SSS</a></li>
+            <li><a href="gizlilik.html">Gizlilik</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="hakkinda.html">Hakkında</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">İletişim ve Bilgiler</p>
+          <ul class="footer-links">
+            <li><a href="mailto:dereliticaret61@gmail.com">dereliticaret61@gmail.com</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play: com.drl.iptvplayer</a></li>
+            <li>Geliştirici: drL Yazılım</li>
+            <li>Resmi Web Sitesi: dereliapps.github.io</li>
+            <li>Son güncelleme: 20 Ekim 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p><strong>Yasal Uyarı:</strong> drL IPTV Player hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz; yalnızca kendi yasal kaynağınızı (M3U veya Xtream Codes) oynatır.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

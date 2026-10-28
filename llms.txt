@@ -1,0 +1,55 @@
+# drL IPTV Player
+
+> drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV'de oynatan modern bir medya oynatıcıdır; uygulama hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz.
+> drL IPTV Player is a modern media player for Android phones, tablets, and Android TV that plays the user's own M3U playlists or Xtream Codes credentials; the app does not provide or sell any channels, movies, or series content.
+
+## Key Facts (Temel Bilgiler)
+- **Exact Name**: drL IPTV Player
+- **Package ID**: `com.drl.iptvplayer`
+- **Google Play Store**: https://play.google.com/store/apps/details?id=com.drl.iptvplayer
+- **Developer**: drL Yazılım
+- **Contact**: dereliticaret61@gmail.com
+- **Supported Platforms**: Android Phone, Android Tablet, Android TV / Google TV (Android OS devices only)
+- **Content Policy**: Does NOT provide, host, or sell any TV channels, movies, series, or playlists. Users must supply their own legal M3U or Xtream Codes source.
+- **Account & Privacy**: No registration or account required. Playlist credentials are encrypted locally on the device via Android Keystore and never sent to developer servers.
+- **Monetization**: Free to download (supported by Google AdMob with EEA/UK/Switzerland UMP consent). Optional Premium subscription via Google Play Billing unlocks ad-free playback, Catch-up (on supported providers), and Multi-Screen.
+
+## Core Features (Özellikler)
+- M3U / M3U8 URL and Xtream Codes API playback
+- Multiple playlists and family user profiles
+- Live TV, Movies (VOD), and Series categories with fast search, favorites, and resume playback
+- QR Code TV Pairing: Send playlists or streams from phone to Android TV over local Wi-Fi (protected by a 6-digit PIN) without typing long URLs on a remote control
+- Chromecast / Google Cast support with built-in local proxy for HLS/CORS compatibility and manual IP connection fallback
+- Parental Control (PIN-protected adult content filter)
+- Electronic Program Guide (EPG), Sleep Timer, Picture-in-Picture (PiP), selectable audio/subtitles
+- Full Android TV D-pad remote support and Lite Mode for low-end devices
+
+## Documentation & Guides (Türkçe - Varsayılan)
+- [Ana Sayfa](https://dereliapps.github.io/tr/index.html)
+- [Nasıl Kurulur (M3U & Xtream)](https://dereliapps.github.io/tr/nasil-kurulur.html)
+- [QR ile TV Eşleştirme](https://dereliapps.github.io/tr/qr-ile-tv-eslestirme.html)
+- [Chromecast Gönderme ve Sorun Giderme](https://dereliapps.github.io/tr/chromecast.html)
+- [M3U Nedir?](https://dereliapps.github.io/tr/m3u-nedir.html)
+- [Xtream Codes Nedir?](https://dereliapps.github.io/tr/xtream-codes-nedir.html)
+- [Sıkça Sorulan Sorular (SSS)](https://dereliapps.github.io/tr/sss.html)
+- [Gizlilik Politikası](https://dereliapps.github.io/tr/gizlilik.html)
+- [İletişim](https://dereliapps.github.io/tr/iletisim.html)
+- [Hakkında](https://dereliapps.github.io/tr/hakkinda.html)
+
+## Documentation & Guides (English)
+- [Home](https://dereliapps.github.io/en/index.html)
+- [How to Set Up (M3U & Xtream)](https://dereliapps.github.io/en/nasil-kurulur.html)
+- [QR TV Pairing Guide](https://dereliapps.github.io/en/qr-ile-tv-eslestirme.html)
+- [Chromecast & Troubleshooting](https://dereliapps.github.io/en/chromecast.html)
+- [What is M3U?](https://dereliapps.github.io/en/m3u-nedir.html)
+- [What is Xtream Codes?](https://dereliapps.github.io/en/xtream-codes-nedir.html)
+- [FAQ](https://dereliapps.github.io/en/sss.html)
+- [Privacy Policy](https://dereliapps.github.io/en/gizlilik.html)
+- [Contact](https://dereliapps.github.io/en/iletisim.html)
+- [About](https://dereliapps.github.io/en/hakkinda.html)
+
+## Other Languages
+- [Deutsch](https://dereliapps.github.io/de/index.html)
+- [Español](https://dereliapps.github.io/es/index.html)
+- [Français](https://dereliapps.github.io/fr/index.html)
+- [Português (Brasil)](https://dereliapps.github.io/pt-br/index.html)

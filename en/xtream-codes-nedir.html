@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is Xtream Codes? API Protocol Explained — drL IPTV Player</title>
+  <meta name="description" content="What is the Xtream Codes API protocol, how does it differ from M3U playlists, and how does it work in drL IPTV Player? Informative guide.">
+  <link rel="canonical" href="https://dereliapps.github.io/en/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="tr" href="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="en" href="https://dereliapps.github.io/en/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="de" href="https://dereliapps.github.io/de/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="es" href="https://dereliapps.github.io/es/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="fr" href="https://dereliapps.github.io/fr/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://dereliapps.github.io/pt-br/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="x-default" href="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="drL IPTV Player">
+  <meta property="og:title" content="What is Xtream Codes? API Protocol Explained — drL IPTV Player">
+  <meta property="og:description" content="What is the Xtream Codes API protocol, how does it differ from M3U playlists, and how does it work in drL IPTV Player? Informative guide.">
+  <meta property="og:url" content="https://dereliapps.github.io/en/xtream-codes-nedir.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="drL IPTV Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is Xtream Codes? API Protocol Explained — drL IPTV Player">
+  <meta name="twitter:description" content="What is the Xtream Codes API protocol, how does it differ from M3U playlists, and how does it work in drL IPTV Player? Informative guide.">
+  <meta name="twitter:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dereliapps.github.io/#organization",
+      "name": "drL Yazılım",
+      "url": "https://dereliapps.github.io/en/index.html",
+      "email": "dereliticaret61@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dereliapps.github.io/assets/img/icon_512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dereliapps.github.io/#app",
+      "name": "drL IPTV Player",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "identifier": "com.drl.iptvplayer",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "featureList": "M3U, Xtream Codes, QR TV Pairing, Chromecast, EPG, Parental Control PIN, Picture-in-Picture, Multi-Profile, Lite Mode",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional in-app Premium subscription via Google Play"
+      },
+      "publisher": {
+        "@id": "https://dereliapps.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dereliapps.github.io/en/xtream-codes-nedir.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dereliapps.github.io/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What is Xtream Codes?",
+          "item": "https://dereliapps.github.io/en/xtream-codes-nedir.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dereliapps.github.io/en/xtream-codes-nedir.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I get Xtream Codes login details?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You obtain them from your own legal IPTV service provider. drL IPTV Player does not sell subscriptions or provide credentials."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does drL IPTV Player handle large Xtream catalogs smoothly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. JSON decoding is performed in a background isolate with a 60-second timeout, preventing UI stutters even on large catalogs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I enter Xtream credentials on Android TV using my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Open QR TV Pairing on your Android TV, scan the QR code with your phone, and paste your Server URL, Username, and Password from your phone browser."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Toggle Theme">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="legal-top-bar" role="region" aria-label="Legal Notice">
+    <div class="container">
+      <div><span class="legal-badge">Legal Notice</span> drL IPTV Player does not provide or sell any channels, movies, or series; you add your own legal source (M3U or Xtream Codes).</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <picture>
+          <source srcset="../assets/img/icon_512.webp" type="image/webp">
+          <img src="../assets/img/icon_512.png" width="40" height="40" alt="drL IPTV Player Logo">
+        </picture>
+        <span>drL IPTV Player</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nasil-kurulur.html">How to Set Up</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR TV Pairing</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">What is M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html" aria-current="page">What is Xtream Codes?</a></li>
+            <li><a href="sss.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Language Switcher">
+            <a href="../tr/xtream-codes-nedir.html" hreflang="tr">TR</a>
+            <a href="../en/xtream-codes-nedir.html" hreflang="en" aria-current="true">EN</a>
+            <a href="../de/xtream-codes-nedir.html" hreflang="de">DE</a>
+            <a href="../es/xtream-codes-nedir.html" hreflang="es">ES</a>
+            <a href="../fr/xtream-codes-nedir.html" hreflang="fr">FR</a>
+            <a href="../pt-br/xtream-codes-nedir.html" hreflang="pt-BR">PT-BR</a>
+        </div>
+        <label for="theme-toggle" class="theme-toggle-label">Toggle Theme</label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li><li><span aria-current="page">What is Xtream Codes?</span></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" class="container">
+
+        <section class="hero">
+          <h1>What is Xtream Codes? How It Works and How It Differs from M3U</h1>
+          <p class="geo-lead">drL IPTV Player is a modern media player for Android phones, tablets, and Android TV that plays the user&#x27;s own M3U playlists or Xtream Codes credentials; the app does not provide or sell any channels, movies, or series content. Xtream Codes API is a standardized communication protocol that lets a media player retrieve structured Live TV, movie, series, and EPG data using a server URL, username, and password.</p>
+        </section>
+
+        <section>
+          <h2>How does the Xtream Codes protocol work?</h2>
+          <p>Instead of pasting a single static playlist file URL, the user enters three credentials provided by their authorized service: Server URL, Username, and Password. The media player queries standardized JSON endpoints on that server to load live categories, video-on-demand (VOD) catalogs, multi-season series hierarchies, and Electronic Program Guide (EPG) data.</p>
+        </section>
+
+        <section>
+          <h2>How does Xtream Codes differ from an M3U playlist?</h2>
+          <div class="card-grid">
+        
+<article class="card"><h3>Simpler Credential Entry</h3><p>Entering a short server URL, username, and password is less error-prone than typing a long M3U query string.</p></article>
+<article class="card"><h3>Structured Series &amp; Seasons</h3><p>TV series are organized by show, season, and episode rather than appearing as thousands of flat entries.</p></article>
+<article class="card"><h3>Integrated EPG &amp; Catch-up</h3><p>Program guide schedules and Catch-up metadata (when supported by the provider) are retrieved automatically without adding a separate XMLTV URL.</p></article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>How does drL IPTV Player handle Xtream Codes security and legal compliance?</h2>
+          <div class="notice-box"><p>Your Xtream Codes server URL, username, and password are encrypted locally on your device using Android Keystore and are transmitted only to the server you specify. drL IPTV Player does not sell or provide Xtream Codes accounts; users are responsible for verifying the legality of their sources.</p></div>
+        </section>
+
+        <section>
+          <h2>What are common questions about Xtream Codes?</h2>
+          <div class="faq-list">
+        
+<article class="faq-item"><h3>Where do I get Xtream Codes login details?</h3><p>You obtain them from your own legal IPTV service provider. drL IPTV Player does not sell subscriptions or provide credentials.</p></article>
+<article class="faq-item"><h3>Does drL IPTV Player handle large Xtream catalogs smoothly?</h3><p>Yes. JSON decoding is performed in a background isolate with a 60-second timeout, preventing UI stutters even on large catalogs.</p></article>
+<article class="faq-item"><h3>Can I enter Xtream credentials on Android TV using my phone?</h3><p>Yes. Open QR TV Pairing on your Android TV, scan the QR code with your phone, and paste your Server URL, Username, and Password from your phone browser.</p></article>
+</div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">drL IPTV Player</p>
+          <p>drL IPTV Player is a modern media player for Android phones, tablets, and Android TV that plays the user&#x27;s own M3U playlists or Xtream Codes credentials; the app does not provide or sell any channels, movies, or series content.</p>
+        </div>
+        <div>
+          <p class="footer-title">Product &amp; Guides</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nasil-kurulur.html">How to Set Up</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR TV Pairing</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">What is M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html">What is Xtream Codes?</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Company &amp; Legal</p>
+          <ul class="footer-links">
+            <li><a href="sss.html">FAQ</a></li>
+            <li><a href="gizlilik.html">Privacy</a></li>
+            <li><a href="iletisim.html">Contact</a></li>
+            <li><a href="hakkinda.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact &amp; Info</p>
+          <ul class="footer-links">
+            <li><a href="mailto:dereliticaret61@gmail.com">dereliticaret61@gmail.com</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play: com.drl.iptvplayer</a></li>
+            <li>Developer: drL Yazılım</li>
+            <li>Official Website: dereliapps.github.io</li>
+            <li>Last updated: October 20, 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p><strong>Legal Notice:</strong> drL IPTV Player does not provide or sell any channels, movies, or series; you add your own legal source (M3U or Xtream Codes).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xtream Codes Nedir? Xtream API Çalışma Mantığı — drL IPTV Player</title>
+  <meta name="description" content="Xtream Codes API nedir, M3U listesinden farkı nedir ve nasıl kullanılır? drL IPTV Player ile Xtream Codes bağlantısı hakkında bilgilendirici rehber.">
+  <link rel="canonical" href="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="tr" href="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="en" href="https://dereliapps.github.io/en/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="de" href="https://dereliapps.github.io/de/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="es" href="https://dereliapps.github.io/es/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="fr" href="https://dereliapps.github.io/fr/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://dereliapps.github.io/pt-br/xtream-codes-nedir.html">
+  <link rel="alternate" hreflang="x-default" href="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="drL IPTV Player">
+  <meta property="og:title" content="Xtream Codes Nedir? Xtream API Çalışma Mantığı — drL IPTV Player">
+  <meta property="og:description" content="Xtream Codes API nedir, M3U listesinden farkı nedir ve nasıl kullanılır? drL IPTV Player ile Xtream Codes bağlantısı hakkında bilgilendirici rehber.">
+  <meta property="og:url" content="https://dereliapps.github.io/tr/xtream-codes-nedir.html">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="drL IPTV Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Xtream Codes Nedir? Xtream API Çalışma Mantığı — drL IPTV Player">
+  <meta name="twitter:description" content="Xtream Codes API nedir, M3U listesinden farkı nedir ve nasıl kullanılır? drL IPTV Player ile Xtream Codes bağlantısı hakkında bilgilendirici rehber.">
+  <meta name="twitter:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dereliapps.github.io/#organization",
+      "name": "drL Yazılım",
+      "url": "https://dereliapps.github.io/tr/index.html",
+      "email": "dereliticaret61@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dereliapps.github.io/assets/img/icon_512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dereliapps.github.io/#app",
+      "name": "drL IPTV Player",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "identifier": "com.drl.iptvplayer",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "featureList": "M3U, Xtream Codes, QR TV Pairing, Chromecast, EPG, Parental Control PIN, Picture-in-Picture, Multi-Profile, Lite Mode",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional in-app Premium subscription via Google Play"
+      },
+      "publisher": {
+        "@id": "https://dereliapps.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dereliapps.github.io/tr/xtream-codes-nedir.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://dereliapps.github.io/tr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Xtream Codes Nedir?",
+          "item": "https://dereliapps.github.io/tr/xtream-codes-nedir.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dereliapps.github.io/tr/xtream-codes-nedir.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Xtream Codes bilgilerini nereden alabilirim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bu bilgileri yalnızca kendi yasal yayın sağlayıcınızdan alabilirsiniz; drL IPTV Player hesap veya abonelik satışı yapmaz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Büyük Xtream listeleri uygulamayı yavaşlatır mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "drL IPTV Player, büyük JSON yanıtlarını arka plan iş parçacığında (isolate) ayrıştırdığı için binlerce kayıt içeren listelerde bile ekran donması yaşanmaz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Xtream bilgilerimi TV'ye nasıl kolayca girebilirim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android TV'de QR ile TV Eşleştirme ekranını açıp telefonunuzla QR kodu okutarak Xtream bilgilerinizi telefon klavyesiyle TV'ye gönderebilirsiniz."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Tema Değiştir">
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+  <div class="legal-top-bar" role="region" aria-label="Yasal Uyarı">
+    <div class="container">
+      <div><span class="legal-badge">Yasal Uyarı</span> drL IPTV Player hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz; yalnızca kendi yasal kaynağınızı (M3U veya Xtream Codes) oynatır.</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <picture>
+          <source srcset="../assets/img/icon_512.webp" type="image/webp">
+          <img src="../assets/img/icon_512.png" width="40" height="40" alt="drL IPTV Player Logo">
+        </picture>
+        <span>drL IPTV Player</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="nasil-kurulur.html">Nasıl Kurulur?</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR ile TV Eşleştirme</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">M3U Nedir?</a></li>
+            <li><a href="xtream-codes-nedir.html" aria-current="page">Xtream Codes Nedir?</a></li>
+            <li><a href="sss.html">SSS</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Language Switcher">
+            <a href="../tr/xtream-codes-nedir.html" hreflang="tr" aria-current="true">TR</a>
+            <a href="../en/xtream-codes-nedir.html" hreflang="en">EN</a>
+            <a href="../de/xtream-codes-nedir.html" hreflang="de">DE</a>
+            <a href="../es/xtream-codes-nedir.html" hreflang="es">ES</a>
+            <a href="../fr/xtream-codes-nedir.html" hreflang="fr">FR</a>
+            <a href="../pt-br/xtream-codes-nedir.html" hreflang="pt-BR">PT-BR</a>
+        </div>
+        <label for="theme-toggle" class="theme-toggle-label">Tema Değiştir</label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Ana Sayfa</a></li><li><span aria-current="page">Xtream Codes Nedir?</span></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" class="container">
+
+        <section class="hero">
+          <h1>Xtream Codes Nedir? M3U Listesinden Farkları ve Kullanım Rehberi</h1>
+          <p class="geo-lead">drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV&#x27;de oynatan modern bir medya oynatıcıdır; uygulama hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz. Xtream Codes API, uzun bir M3U URL&#x27;si kopyalamak yerine sunucu adresi, kullanıcı adı ve şifre ile medya oynatıcının içerik kategorilerini ve EPG verilerini JSON formatında çekmesini sağlayan standart bir iletişim protokolüdür.</p>
+        </section>
+
+        <section>
+          <h2>Xtream Codes protokolü nasıl çalışır?</h2>
+          <p>Kullanıcı medya oynatıcıya üç temel bilgi girer: Sunucu URL&#x27;si (ör. http://ornek-sunucu.com:8080), Kullanıcı Adı ve Şifre. Oynatıcı bu kimlik bilgileriyle sunucunun standart API uç noktalarına bağlanarak canlı TV kategorilerini, isteğe bağlı video (VOD/film) listesini, dizi sezon/bölüm yapılarını ve elektronik program rehberini (EPG) ayrı ayrı sorgular.</p>
+        </section>
+
+        <section>
+          <h2>Xtream Codes ile M3U oynatma listesi arasındaki farklar nelerdir?</h2>
+          <div class="card-grid">
+        
+<article class="card"><h3>Kolay Giriş Bilgileri</h3><p>Karmaşık ve uzun M3U parametreleri yerine sunucu adresi, kullanıcı adı ve şifre olmak üzere üç net bilgiyle kurulum yapılır.</p></article>
+<article class="card"><h3>Yapılandırılmış Dizi ve Sezonlar</h3><p>Dizilerin sezon ve bölümleri M3U&#x27;daki düz liste yerine hiyerarşik olarak gruplanır ve kaldığınız yerden devam etme takibi kolaylaşır.</p></article>
+<article class="card"><h3>Otomatik EPG ve Geri Sar Bilgisi</h3><p>Program rehberi (EPG) ve sağlayıcı destekliyorsa Geri Sar (Catch-up) bilgileri ek bir URL girmeden doğrudan protokol üzerinden alınır.</p></article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>Xtream Codes kullanımında güvenlik ve yasal kurallar nelerdir?</h2>
+          <div class="notice-box"><p>drL IPTV Player üzerinde girdiğiniz Xtream Codes sunucu ve şifre bilgileri yalnızca cihazınızda Android Keystore ile şifrelenerek saklanır; yalnızca sizin belirttiğiniz sunucuya yayın talebi göndermek için kullanılır. drL IPTV Player hiçbir Xtream hesabı satmaz veya sağlamaz; kullanıcı eklediği kaynağın yasal olmasından sorumludur.</p></div>
+        </section>
+
+        <section>
+          <h2>Xtream Codes hakkında sıkça sorulan sorular nelerdir?</h2>
+          <div class="faq-list">
+        
+<article class="faq-item"><h3>Xtream Codes bilgilerini nereden alabilirim?</h3><p>Bu bilgileri yalnızca kendi yasal yayın sağlayıcınızdan alabilirsiniz; drL IPTV Player hesap veya abonelik satışı yapmaz.</p></article>
+<article class="faq-item"><h3>Büyük Xtream listeleri uygulamayı yavaşlatır mı?</h3><p>drL IPTV Player, büyük JSON yanıtlarını arka plan iş parçacığında (isolate) ayrıştırdığı için binlerce kayıt içeren listelerde bile ekran donması yaşanmaz.</p></article>
+<article class="faq-item"><h3>Xtream bilgilerimi TV&#x27;ye nasıl kolayca girebilirim?</h3><p>Android TV&#x27;de QR ile TV Eşleştirme ekranını açıp telefonunuzla QR kodu okutarak Xtream bilgilerinizi telefon klavyesiyle TV&#x27;ye gönderebilirsiniz.</p></article>
+</div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">drL IPTV Player</p>
+          <p>drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV&#x27;de oynatan modern bir medya oynatıcıdır; uygulama hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz.</p>
+        </div>
+        <div>
+          <p class="footer-title">Ürün ve Rehberler</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="nasil-kurulur.html">Nasıl Kurulur?</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">QR ile TV Eşleştirme</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">M3U Nedir?</a></li>
+            <li><a href="xtream-codes-nedir.html">Xtream Codes Nedir?</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Kurumsal ve Yasal</p>
+          <ul class="footer-links">
+            <li><a href="sss.html">SSS</a></li>
+            <li><a href="gizlilik.html">Gizlilik</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="hakkinda.html">Hakkında</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">İletişim ve Bilgiler</p>
+          <ul class="footer-links">
+            <li><a href="mailto:dereliticaret61@gmail.com">dereliticaret61@gmail.com</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play: com.drl.iptvplayer</a></li>
+            <li>Geliştirici: drL Yazılım</li>
+            <li>Resmi Web Sitesi: dereliapps.github.io</li>
+            <li>Son güncelleme: 20 Ekim 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p><strong>Yasal Uyarı:</strong> drL IPTV Player hiçbir kanal, film veya dizi içeriği sunmaz ve satmaz; yalnızca kendi yasal kaynağınızı (M3U veya Xtream Codes) oynatır.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

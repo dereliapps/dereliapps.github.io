@@ -1,0 +1,21 @@
+{
+  "name": "drL IPTV Player",
+  "short_name": "drL IPTV Player",
+  "description": "drL IPTV Player, kullanıcının kendi M3U oynatma listesini veya Xtream Codes bilgilerini Android telefon, tablet ve Android TV'de oynatan modern bir medya oynatıcıdır.",
+  "start_url": "/tr/index.html",
+  "display": "standalone",
+  "background_color": "#050A14",
+  "theme_color": "#050A14",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

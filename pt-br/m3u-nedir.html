@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O que é M3U? Guia sobre listas M3U e M3U8 — drL IPTV Player</title>
+  <meta name="description" content="Entenda o que é um arquivo M3U ou M3U8, como ele funciona tecnicamente e como utilizá-lo de forma legal no drL IPTV Player.">
+  <link rel="canonical" href="https://dereliapps.github.io/pt-br/m3u-nedir.html">
+  <link rel="alternate" hreflang="tr" href="https://dereliapps.github.io/tr/m3u-nedir.html">
+  <link rel="alternate" hreflang="en" href="https://dereliapps.github.io/en/m3u-nedir.html">
+  <link rel="alternate" hreflang="de" href="https://dereliapps.github.io/de/m3u-nedir.html">
+  <link rel="alternate" hreflang="es" href="https://dereliapps.github.io/es/m3u-nedir.html">
+  <link rel="alternate" hreflang="fr" href="https://dereliapps.github.io/fr/m3u-nedir.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://dereliapps.github.io/pt-br/m3u-nedir.html">
+  <link rel="alternate" hreflang="x-default" href="https://dereliapps.github.io/tr/m3u-nedir.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="drL IPTV Player">
+  <meta property="og:title" content="O que é M3U? Guia sobre listas M3U e M3U8 — drL IPTV Player">
+  <meta property="og:description" content="Entenda o que é um arquivo M3U ou M3U8, como ele funciona tecnicamente e como utilizá-lo de forma legal no drL IPTV Player.">
+  <meta property="og:url" content="https://dereliapps.github.io/pt-br/m3u-nedir.html">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="drL IPTV Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O que é M3U? Guia sobre listas M3U e M3U8 — drL IPTV Player">
+  <meta name="twitter:description" content="Entenda o que é um arquivo M3U ou M3U8, como ele funciona tecnicamente e como utilizá-lo de forma legal no drL IPTV Player.">
+  <meta name="twitter:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dereliapps.github.io/#organization",
+      "name": "drL Yazılım",
+      "url": "https://dereliapps.github.io/pt-br/index.html",
+      "email": "dereliticaret61@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dereliapps.github.io/assets/img/icon_512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dereliapps.github.io/#app",
+      "name": "drL IPTV Player",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "identifier": "com.drl.iptvplayer",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "featureList": "M3U, Xtream Codes, QR TV Pairing, Chromecast, EPG, Parental Control PIN, Picture-in-Picture, Multi-Profile, Lite Mode",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional in-app Premium subscription via Google Play"
+      },
+      "publisher": {
+        "@id": "https://dereliapps.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dereliapps.github.io/pt-br/m3u-nedir.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://dereliapps.github.io/pt-br/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "O que é M3U?",
+          "item": "https://dereliapps.github.io/pt-br/m3u-nedir.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dereliapps.github.io/pt-br/m3u-nedir.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Uma lista M3U funciona sem conexão com a internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Como a lista aponta para transmissões online, é necessário ter conexão ativa com a internet e um servidor de origem em funcionamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O drL IPTV Player já vem com listas M3U prontas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O aplicativo é entregue vazio; o próprio usuário adiciona sua fonte legal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre M3U e M3U8?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O M3U8 utiliza codificação de caracteres UTF-8, garantindo a exibição correta de acentos e suporte às transmissões HLS."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Alternar tema">
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+  <div class="legal-top-bar" role="region" aria-label="Aviso legal">
+    <div class="container">
+      <div><span class="legal-badge">Aviso legal</span> O drL IPTV Player não fornece nem vende canais, filmes ou séries; você adiciona sua própria fonte legal (M3U ou Xtream Codes).</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <picture>
+          <source srcset="../assets/img/icon_512.webp" type="image/webp">
+          <img src="../assets/img/icon_512.png" width="40" height="40" alt="drL IPTV Player Logo">
+        </picture>
+        <span>drL IPTV Player</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="nasil-kurulur.html">Como configurar</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">Parear TV via QR</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html" aria-current="page">O que é M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html">O que é Xtream Codes?</a></li>
+            <li><a href="sss.html">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Language Switcher">
+            <a href="../tr/m3u-nedir.html" hreflang="tr">TR</a>
+            <a href="../en/m3u-nedir.html" hreflang="en">EN</a>
+            <a href="../de/m3u-nedir.html" hreflang="de">DE</a>
+            <a href="../es/m3u-nedir.html" hreflang="es">ES</a>
+            <a href="../fr/m3u-nedir.html" hreflang="fr">FR</a>
+            <a href="../pt-br/m3u-nedir.html" hreflang="pt-BR" aria-current="true">PT-BR</a>
+        </div>
+        <label for="theme-toggle" class="theme-toggle-label">Alternar tema</label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Início</a></li><li><span aria-current="page">O que é M3U?</span></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" class="container">
+
+        <section class="hero">
+          <h1>O que é M3U? Guia neutro sobre listas de reprodução M3U e M3U8</h1>
+          <p class="geo-lead">O drL IPTV Player é um reprodutor de mídia moderno para celulares Android, tablets e Android TV que reproduz as próprias listas M3U ou credenciais Xtream Codes do usuário; o aplicativo não fornece nem vende canais, filmes ou séries. O formato M3U (MP3 URL) é um padrão de arquivo de texto simples que lista endereços de fluxos de mídia, nomes de canais, grupos de categorias e identificadores de programação.</p>
+        </section>
+
+        <section>
+          <h2>Como funcionam tecnicamente os arquivos M3U e M3U8?</h2>
+          <p>Um arquivo M3U não contém arquivos de vídeo ou áudio dentro dele; ele funciona como um índice que aponta o reprodutor de mídia para os endereços dos servidores. O arquivo começa com o cabeçalho &#x27;#EXTM3U&#x27;, seguido por linhas &#x27;#EXTINF&#x27; (com nome do canal, categoria &#x27;group-title&#x27;, link do logotipo e código &#x27;tvg-id&#x27; do guia EPG) e, na linha abaixo, a URL da transmissão. Quando codificado em UTF-8, o formato recebe o nome M3U8, muito utilizado em transmissões HLS.</p>
+        </section>
+
+        <section>
+          <h2>Quais são os elementos principais de uma lista M3U?</h2>
+          <div class="card-grid">
+        
+<article class="card"><h3>URL M3U remota</h3><p>Um endereço http:// ou https:// fornecido por um provedor autorizado para que o player carregue a lista sempre atualizada.</p></article>
+<article class="card"><h3>Organização por categorias</h3><p>O atributo &#x27;group-title&#x27; permite ao drL IPTV Player separar canais ao vivo, filmes e séries em pastas automaticamente.</p></article>
+<article class="card"><h3>Integração com guia EPG</h3><p>O atributo &#x27;tvg-id&#x27; vincula cada canal à sua grade de programação eletrônica.</p></article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>Qual é a responsabilidade legal ao usar listas M3U?</h2>
+          <div class="notice-box"><p>O formato M3U em si é um padrão técnico aberto e legítimo. No entanto, o usuário é o único responsável por garantir que possui autorização legal para acessar os fluxos incluídos na lista. O drL IPTV Player não fornece, hospeda nem vende listas M3U.</p></div>
+        </section>
+
+        <section>
+          <h2>Quais são as perguntas frequentes sobre o formato M3U?</h2>
+          <div class="faq-list">
+        
+<article class="faq-item"><h3>Uma lista M3U funciona sem conexão com a internet?</h3><p>Não. Como a lista aponta para transmissões online, é necessário ter conexão ativa com a internet e um servidor de origem em funcionamento.</p></article>
+<article class="faq-item"><h3>O drL IPTV Player já vem com listas M3U prontas?</h3><p>Não. O aplicativo é entregue vazio; o próprio usuário adiciona sua fonte legal.</p></article>
+<article class="faq-item"><h3>Qual é a diferença entre M3U e M3U8?</h3><p>O M3U8 utiliza codificação de caracteres UTF-8, garantindo a exibição correta de acentos e suporte às transmissões HLS.</p></article>
+</div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">drL IPTV Player</p>
+          <p>O drL IPTV Player é um reprodutor de mídia moderno para celulares Android, tablets e Android TV que reproduz as próprias listas M3U ou credenciais Xtream Codes do usuário; o aplicativo não fornece nem vende canais, filmes ou séries.</p>
+        </div>
+        <div>
+          <p class="footer-title">Produto e Guias</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="nasil-kurulur.html">Como configurar</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">Parear TV via QR</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">O que é M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html">O que é Xtream Codes?</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Empresa e Legal</p>
+          <ul class="footer-links">
+            <li><a href="sss.html">Perguntas frequentes</a></li>
+            <li><a href="gizlilik.html">Privacidade</a></li>
+            <li><a href="iletisim.html">Contato</a></li>
+            <li><a href="hakkinda.html">Sobre</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contato e Informações</p>
+          <ul class="footer-links">
+            <li><a href="mailto:dereliticaret61@gmail.com">dereliticaret61@gmail.com</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play: com.drl.iptvplayer</a></li>
+            <li>Desenvolvedor: drL Yazılım</li>
+            <li>Site oficial: dereliapps.github.io</li>
+            <li>Última atualização: 20 de outubro de 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p><strong>Aviso legal:</strong> O drL IPTV Player não fornece nem vende canais, filmes ou séries; você adiciona sua própria fonte legal (M3U ou Xtream Codes).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

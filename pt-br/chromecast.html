@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como transmitir para o Chromecast e resolver problemas — drL IPTV Player</title>
+  <meta name="description" content="Aprenda a transmitir TV ao vivo, filmes e séries do drL IPTV Player para aparelhos Chromecast e Google TV e veja como corrigir falhas de conexão.">
+  <link rel="canonical" href="https://dereliapps.github.io/pt-br/chromecast.html">
+  <link rel="alternate" hreflang="tr" href="https://dereliapps.github.io/tr/chromecast.html">
+  <link rel="alternate" hreflang="en" href="https://dereliapps.github.io/en/chromecast.html">
+  <link rel="alternate" hreflang="de" href="https://dereliapps.github.io/de/chromecast.html">
+  <link rel="alternate" hreflang="es" href="https://dereliapps.github.io/es/chromecast.html">
+  <link rel="alternate" hreflang="fr" href="https://dereliapps.github.io/fr/chromecast.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://dereliapps.github.io/pt-br/chromecast.html">
+  <link rel="alternate" hreflang="x-default" href="https://dereliapps.github.io/tr/chromecast.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="drL IPTV Player">
+  <meta property="og:title" content="Como transmitir para o Chromecast e resolver problemas — drL IPTV Player">
+  <meta property="og:description" content="Aprenda a transmitir TV ao vivo, filmes e séries do drL IPTV Player para aparelhos Chromecast e Google TV e veja como corrigir falhas de conexão.">
+  <meta property="og:url" content="https://dereliapps.github.io/pt-br/chromecast.html">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="drL IPTV Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como transmitir para o Chromecast e resolver problemas — drL IPTV Player">
+  <meta name="twitter:description" content="Aprenda a transmitir TV ao vivo, filmes e séries do drL IPTV Player para aparelhos Chromecast e Google TV e veja como corrigir falhas de conexão.">
+  <meta name="twitter:image" content="https://dereliapps.github.io/assets/img/feature_graphic_1024x500.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dereliapps.github.io/#organization",
+      "name": "drL Yazılım",
+      "url": "https://dereliapps.github.io/pt-br/index.html",
+      "email": "dereliticaret61@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dereliapps.github.io/assets/img/icon_512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://dereliapps.github.io/#app",
+      "name": "drL IPTV Player",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "identifier": "com.drl.iptvplayer",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.drl.iptvplayer",
+      "featureList": "M3U, Xtream Codes, QR TV Pairing, Chromecast, EPG, Parental Control PIN, Picture-in-Picture, Multi-Profile, Lite Mode",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional in-app Premium subscription via Google Play"
+      },
+      "publisher": {
+        "@id": "https://dereliapps.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dereliapps.github.io/pt-br/chromecast.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://dereliapps.github.io/pt-br/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chromecast",
+          "item": "https://dereliapps.github.io/pt-br/chromecast.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dereliapps.github.io/pt-br/chromecast.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Por que o aplicativo pede permissão de rede local para o Chromecast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O acesso à rede local e multicast Wi-Fi é usado somente para localizar aparelhos Cast na sua rede doméstica e enviar o fluxo de vídeo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso conectar digitando o endereço IP da TV manualmente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Na parte inferior da tela do Chromecast você pode digitar o IP local da TV para conectar diretamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ao desconectar no celular a reprodução na TV é encerrada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Quando você encerra a conexão pelo aplicativo, a sessão do receptor Cast na TV também é fechada corretamente."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Alternar tema">
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+  <div class="legal-top-bar" role="region" aria-label="Aviso legal">
+    <div class="container">
+      <div><span class="legal-badge">Aviso legal</span> O drL IPTV Player não fornece nem vende canais, filmes ou séries; você adiciona sua própria fonte legal (M3U ou Xtream Codes).</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="index.html">
+        <picture>
+          <source srcset="../assets/img/icon_512.webp" type="image/webp">
+          <img src="../assets/img/icon_512.png" width="40" height="40" alt="drL IPTV Player Logo">
+        </picture>
+        <span>drL IPTV Player</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="nasil-kurulur.html">Como configurar</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">Parear TV via QR</a></li>
+            <li><a href="chromecast.html" aria-current="page">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">O que é M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html">O que é Xtream Codes?</a></li>
+            <li><a href="sss.html">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Language Switcher">
+            <a href="../tr/chromecast.html" hreflang="tr">TR</a>
+            <a href="../en/chromecast.html" hreflang="en">EN</a>
+            <a href="../de/chromecast.html" hreflang="de">DE</a>
+            <a href="../es/chromecast.html" hreflang="es">ES</a>
+            <a href="../fr/chromecast.html" hreflang="fr">FR</a>
+            <a href="../pt-br/chromecast.html" hreflang="pt-BR" aria-current="true">PT-BR</a>
+        </div>
+        <label for="theme-toggle" class="theme-toggle-label">Alternar tema</label>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Início</a></li><li><span aria-current="page">Chromecast</span></li>
+    </ol>
+  </nav>
+
+  <main id="main-content" class="container">
+
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Como transmitir para o Chromecast e solucionar problemas de conexão</h1>
+              <p class="geo-lead">O drL IPTV Player é um reprodutor de mídia moderno para celulares Android, tablets e Android TV que reproduz as próprias listas M3U ou credenciais Xtream Codes do usuário; o aplicativo não fornece nem vende canais, filmes ou séries. Encontre automaticamente aparelhos Chromecast e TVs compatíveis com Google Cast na sua rede Wi-Fi e envie canais ao vivo e vídeos para a tela grande.</p>
+              <div class="cta-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Baixar no Google Play</a>
+              </div>
+            </div>
+            <div>
+              <figure class="screenshot-card"><picture><source srcset="../assets/img/4_chromecast.webp" type="image/webp"><img src="../assets/img/4_chromecast.png" width="1600" height="900" alt="Conexão Chromecast (interface em turco na imagem): Transmita canais ao vivo e vídeos para TVs compatíveis com Google Cast no mesmo Wi-Fi." loading="eager"></picture><figcaption>Conexão Chromecast (interface em turco na imagem): Transmita canais ao vivo e vídeos para TVs compatíveis com Google Cast no mesmo Wi-Fi.</figcaption></figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Como transmitir conteúdo para o Chromecast passo a passo?</h2>
+          <ol class="steps-list">
+        
+<li>Conecte seu celular ou tablet Android à mesma rede Wi-Fi do seu Chromecast ou Google TV.</li>
+<li>Abra o drL IPTV Player e inicie um canal ou vídeo, ou toque no ícone Cast na barra superior.</li>
+<li>Na aba &#x27;Chromecast&#x27;, selecione sua TV na lista de aparelhos encontrados.</li>
+<li>Se a TV não aparecer automaticamente, digite o endereço IP local da TV (em Configurações da TV &gt; Rede) no campo manual e toque em &#x27;Conectar&#x27;.</li>
+<li>Após conectar, a reprodução começa na TV e você controla pausa e volume pelo celular.</li>
+
+          </ol>
+        </section>
+
+        <section>
+          <h2>Como resolver problemas de detecção ou reprodução no Chromecast?</h2>
+          <div class="card-grid">
+        
+<article class="card"><h3>O aparelho não aparece na lista</h3><p>Verifique se o celular e a TV estão na mesma rede Wi-Fi, desligue aplicativos de VPN e toque em buscar novamente ou conecte informando o IP local da TV.</p></article>
+<article class="card"><h3>O vídeo abre no celular, mas não carrega na TV</h3><p>Muitos servidores IPTV não enviam cabeçalhos CORS. O drL IPTV Player utiliza um proxy local integrado para ajustar cabeçalhos e segmentos HLS para o receptor Cast.</p></article>
+<article class="card"><h3>Usando o Espelhamento de Tela como alternativa</h3><p>Se sua TV não tiver suporte ao Google Cast, acesse a aba de espelhamento de tela para abrir a função nativa do Android (Miracast / Smart View).</p></article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>Quais são as dúvidas frequentes sobre o Chromecast?</h2>
+          <div class="faq-list">
+        
+<article class="faq-item"><h3>Por que o aplicativo pede permissão de rede local para o Chromecast?</h3><p>O acesso à rede local e multicast Wi-Fi é usado somente para localizar aparelhos Cast na sua rede doméstica e enviar o fluxo de vídeo.</p></article>
+<article class="faq-item"><h3>Posso conectar digitando o endereço IP da TV manualmente?</h3><p>Sim. Na parte inferior da tela do Chromecast você pode digitar o IP local da TV para conectar diretamente.</p></article>
+<article class="faq-item"><h3>Ao desconectar no celular a reprodução na TV é encerrada?</h3><p>Sim. Quando você encerra a conexão pelo aplicativo, a sessão do receptor Cast na TV também é fechada corretamente.</p></article>
+</div></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">drL IPTV Player</p>
+          <p>O drL IPTV Player é um reprodutor de mídia moderno para celulares Android, tablets e Android TV que reproduz as próprias listas M3U ou credenciais Xtream Codes do usuário; o aplicativo não fornece nem vende canais, filmes ou séries.</p>
+        </div>
+        <div>
+          <p class="footer-title">Produto e Guias</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="nasil-kurulur.html">Como configurar</a></li>
+            <li><a href="qr-ile-tv-eslestirme.html">Parear TV via QR</a></li>
+            <li><a href="chromecast.html">Chromecast</a></li>
+            <li><a href="m3u-nedir.html">O que é M3U?</a></li>
+            <li><a href="xtream-codes-nedir.html">O que é Xtream Codes?</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Empresa e Legal</p>
+          <ul class="footer-links">
+            <li><a href="sss.html">Perguntas frequentes</a></li>
+            <li><a href="gizlilik.html">Privacidade</a></li>
+            <li><a href="iletisim.html">Contato</a></li>
+            <li><a href="hakkinda.html">Sobre</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contato e Informações</p>
+          <ul class="footer-links">
+            <li><a href="mailto:dereliticaret61@gmail.com">dereliticaret61@gmail.com</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.drl.iptvplayer" rel="noopener noreferrer" target="_blank">Google Play: com.drl.iptvplayer</a></li>
+            <li>Desenvolvedor: drL Yazılım</li>
+            <li>Site oficial: dereliapps.github.io</li>
+            <li>Última atualização: 20 de outubro de 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p><strong>Aviso legal:</strong> O drL IPTV Player não fornece nem vende canais, filmes ou séries; você adiciona sua própria fonte legal (M3U ou Xtream Codes).</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
