@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temkin · Kripto işlem günlüğü</title>
+<meta name="description" content="Temkin: borsanı salt okunur anahtarla bağla, kâr/zarar takvimin ve hatalarının bedeli kendiliğinden çıksın. Sunucu yok, hesap yok.">
+<meta property="og:title" content="Temkin · Kripto işlem günlüğü">
+<meta property="og:description" content="Borsanı bağla, işlemlerin kendiliğinden gelsin. Kâr/zarar takvimi, içgörüler, gün sonu ritüeli.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --ground: #0E0D0B; --surface: #171512; --line: #2A2620; --line-soft: #201D19;
+    --text: #F2EDE4; --soft: #CFC8BB; --muted: #A39C90; --faint: #7A7368;
+    --flame: #FFB547; --gain: #5BD69A; --loss: #FF6B5E;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--text); font: 16px/1.6 "Geist", -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 72px; }
+  a { color: var(--flame); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 56px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 700 20px/1 "Bricolage Grotesque", sans-serif; letter-spacing: -0.02em; color: var(--text); }
+  .lang { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .lang button { all: unset; cursor: pointer; font: 500 13px/1 "Geist Mono", monospace; color: var(--muted); padding: 7px 12px; border-radius: 999px; }
+  .lang button[aria-pressed="true"] { background: var(--line); color: var(--text); }
+  h1 { font: 700 clamp(40px, 9vw, 64px)/1.02 "Bricolage Grotesque", sans-serif; letter-spacing: -0.035em; margin: 0 0 18px; }
+  h1 em { font-style: normal; color: var(--flame); }
+  .lede { font-size: 19px; color: var(--soft); max-width: 34em; margin: 0 0 28px; }
+  .cta { display: inline-flex; align-items: center; gap: 10px; background: var(--flame); color: #1A1206; font-weight: 600; padding: 14px 22px; border-radius: 999px; }
+  .cta:hover { text-decoration: none; filter: brightness(1.05); }
+  .cta.soon { background: var(--surface); color: var(--soft); border: 1px solid var(--line); cursor: default; }
+  .note { font-size: 14px; color: var(--faint); margin-top: 12px; }
+  .cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin: 48px 0 8px; }
+  .cal span { aspect-ratio: 1; border-radius: 8px; background: var(--surface); border: 1px solid var(--line-soft); }
+  .cal .g1 { background: rgba(91,214,154,.14); border-color: transparent; } .cal .g2 { background: rgba(91,214,154,.36); border-color: transparent; }
+  .cal .r1 { background: rgba(255,107,94,.14); border-color: transparent; } .cal .r2 { background: rgba(255,107,94,.34); border-color: transparent; }
+  .cal .today { border: 2px solid var(--flame); }
+  .caption { font: 400 12px/1.4 "Geist Mono", monospace; color: var(--faint); margin-bottom: 56px; }
+  h2 { font: 700 26px/1.15 "Bricolage Grotesque", sans-serif; letter-spacing: -0.02em; margin: 56px 0 18px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .card h3 { font: 600 16px/1.3 "Geist", sans-serif; margin: 0 0 6px; }
+  .card p { margin: 0; font-size: 14px; color: var(--muted); }
+  .venues { font: 500 14px/1.8 "Geist Mono", monospace; color: var(--soft); }
+  details { border-top: 1px solid var(--line); padding: 14px 0; }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--muted); font-family: "Geist Mono", monospace; }
+  details[open] summary::after { content: "–"; }
+  details p, details li { color: var(--soft); font-size: 15px; }
+  details ol { padding-left: 20px; }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line-soft); font-size: 14px; color: var(--faint); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  [data-lang="en"] .tr, [data-lang="tr"] .en { display: none; }
+</style>
+</head>
+<body data-lang="tr">
+<main>
+  <nav>
+    <div class="brand">
+      <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1c1.5 4.5 7.5 7.7 7.5 14.2A7.5 7.5 0 0 1 11 22.7a7.5 7.5 0 0 1-7.5-7.5C3.5 11 6 8.6 7.6 6.2c.4 2.6 1.7 4.2 3 4.9C10.8 7.6 10.5 4.2 11 1Z" fill="#FFB547"/><circle cx="11" cy="16.5" r="2.6" fill="#1A1206"/></svg>
+      Temkin
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="tr" aria-pressed="true">TR</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+
+  <section class="tr" lang="tr">
+    <h1>Soğukkanlı trader’ın <em>defteri.</em></h1>
+    <p class="lede">Borsanı salt okunur anahtarla bir kez bağla. Kapanan her işlem, komisyonu ve funding’iyle takvimine kendiliğinden düşer. Hangi saatte, hangi kaldıraçta, hangi duyguyla kaybettiğini gör.</p>
+    <span class="cta soon">Yakında App Store’da</span>
+    <p class="note">iPhone · iOS 17 ve üzeri · Türkçe ve İngilizce</p>
+  </section>
+  <section class="en" lang="en">
+    <h1>The journal for <em>composed</em> traders.</h1>
+    <p class="lede">Connect your exchange once with a read-only key. Every closed trade lands on your calendar with fees and funding. See which hours, which leverage and which mood cost you money.</p>
+    <span class="cta soon">Coming soon to the App Store</span>
+    <p class="note">iPhone · iOS 17 or later · English and Turkish</p>
+  </section>
+
+  <div class="cal" aria-hidden="true">
+    <span></span><span class="g1"></span><span class="r1"></span><span class="g2"></span><span></span><span class="g1"></span><span></span>
+    <span class="r2"></span><span class="g1"></span><span class="g2"></span><span></span><span class="r1"></span><span class="g1"></span><span></span>
+    <span class="g2"></span><span class="g1"></span><span class="r1"></span><span class="g1"></span><span class="g2 today"></span><span></span><span></span>
+  </div>
+  <div class="caption"><span class="tr">Kâr/zarar takvimi · her gün yeşil ya da kırmızı</span><span class="en">P&amp;L calendar · every day green or red</span></div>
+
+  <section class="tr" lang="tr">
+    <h2>Neler yapar</h2>
+    <div class="features">
+      <div class="card"><h3>Canlı senkron</h3><p>Binance, Bybit, OKX, Bitget ve BtcTurk. Elle giriş, Excel yok.</p></div>
+      <div class="card"><h3>Kanıtlı içgörüler</h3><p>Kaybettiren saatler, kaldıracın bedeli, intikam işlemleri; hepsi kendi işlemlerinden.</p></div>
+      <div class="card"><h3>Niyetini söyle</h3><p>Pozisyona girerken nedenini sesle kaydet, kapanınca sonuçla yan yana gör.</p></div>
+      <div class="card"><h3>Gün sonu ritüeli</h3><p>Kurulum, duygu ve hata etiketleriyle günü kapat, disiplin serini koru.</p></div>
+      <div class="card"><h3>Kuruşu kuruşuna</h3><p>Kâr/zararın borsanın kendi kayıtlarıyla karşılaştırılır.</p></div>
+      <div class="card"><h3>Sunucu yok</h3><p>Hesap yok, analiz aracı yok. Anahtarların telefonundaki Keychain’de kalır.</p></div>
+    </div>
+
+    <h2>Destek</h2>
+    <details><summary>Salt okunur API anahtarını nasıl oluştururum?</summary>
+      <ol>
+        <li>Borsanın web sitesinde ya da uygulamasında API yönetimi sayfasını aç ve yeni bir anahtar oluştur.</li>
+        <li>Yalnızca <b>okuma</b> iznini aç. İşlem (trade) ve para çekme izinlerini kapalı bırak.</li>
+        <li>OKX için anahtarı oluştururken belirlediğin parolayı (passphrase) da gir.</li>
+        <li>Temkin’de Borsalar › Bağla ekranına anahtarı ve gizli anahtarı yapıştır.</li>
+      </ol>
+      <p>Her borsa için adım adım rehber uygulamanın Bağla ekranında var. İşlem ya da çekme izni açık olan anahtarlar reddedilir.</p>
+    </details>
+    <details><summary>Anahtarım güvende mi?</summary>
+      <p>Anahtar yalnızca telefonundaki Keychain’de, bu cihaza kilitli olarak saklanır. Temkin’in sunucusu yoktur; geçmişin doğrudan telefonundan borsanın sunucusuna sorulur. Salt okunur bir anahtarla işlem açılamaz, para çekilemez.</p>
+    </details>
+    <details><summary>Geçmişimin bir kısmı neden eksik?</summary>
+      <p>Binance ve OKX API’leri vadeli işlemlerde son 3 ayı verir. Daha eski geçmişi borsanın dışa aktardığı CSV ya da XLSX dosyasıyla Borsalar › Dosyayla bölümünden ekleyebilirsin; aynı işlemler iki kez sayılmaz.</p>
+    </details>
+    <details><summary>Kâr/zararım borsadakiyle neden farklı görünüyor?</summary>
+      <p>Borsalar › Doğrulama ekranı, Temkin’in hesabını borsanın kendi kayıtlarıyla karşılaştırır ve farkın nereden geldiğini (komisyon, funding, gün başlangıç saati) gösterir. Takvim gününün başlangıç saatini Ayarlar’dan değiştirebilirsin.</p>
+    </details>
+    <details><summary>Aboneliği nasıl iptal ederim?</summary>
+      <p>iPhone’da Ayarlar › adın › Abonelikler › Temkin. İptal edersen dönem sonuna kadar Pro açık kalır. Deneme bitmeden bir gün önce uygulama sana hatırlatır.</p>
+    </details>
+    <details><summary>Verilerimi nasıl silerim?</summary>
+      <p>Temkin › Ayarlar › “Tüm verileri ve anahtarları sil”. Uygulamayı kaldırmak da her şeyi siler. iCloud yedeğini Ayarlar’dan kapatabilirsin.</p>
+    </details>
+    <p style="margin-top:24px">Başka bir sorun mu var? Yaz: <a href="mailto:dereli@hoodflow.app?subject=Temkin">dereli@hoodflow.app</a>. Genelde aynı gün dönüyoruz.</p>
+  </section>
+
+  <section class="en" lang="en">
+    <h2>What it does</h2>
+    <div class="features">
+      <div class="card"><h3>Live sync</h3><p>Binance, Bybit, OKX, Bitget and BtcTurk. No manual entry, no spreadsheets.</p></div>
+      <div class="card"><h3>Insights with evidence</h3><p>Losing hours, the cost of leverage, revenge trades, all from your own trades.</p></div>
+      <div class="card"><h3>Say your intent</h3><p>Record why you’re entering by voice, see it next to the outcome when the trade closes.</p></div>
+      <div class="card"><h3>End-of-day ritual</h3><p>Close the day with setup, emotion and mistake tags. Keep your streak alive.</p></div>
+      <div class="card"><h3>Matched to the cent</h3><p>Your P&amp;L is checked against the exchange’s own records.</p></div>
+      <div class="card"><h3>No server</h3><p>No account, no analytics. Your keys stay in your phone’s Keychain.</p></div>
+    </div>
+
+    <h2>Support</h2>
+    <details><summary>How do I create a read-only API key?</summary>
+      <ol>
+        <li>Open the API management page on your exchange’s website or app and create a new key.</li>
+        <li>Enable <b>read</b> only. Leave trading and withdrawal permissions off.</li>
+        <li>For OKX, also enter the passphrase you set when creating the key.</li>
+        <li>In Temkin, go to Exchanges › Connect and paste the key and secret.</li>
+      </ol>
+      <p>The Connect screen has a step-by-step guide for each exchange. Keys with trading or withdrawal permission are rejected.</p>
+    </details>
+    <details><summary>Is my key safe?</summary>
+      <p>The key is stored only in your phone’s Keychain, locked to this device. Temkin has no server; your history is requested directly from your phone to the exchange. A read-only key can’t place trades or withdraw funds.</p>
+    </details>
+    <details><summary>Why is part of my history missing?</summary>
+      <p>Binance and OKX APIs return the last 3 months of futures history. Add older history with the CSV or XLSX export from your exchange under Exchanges › From a file; trades are never counted twice.</p>
+    </details>
+    <details><summary>Why does my P&amp;L differ from the exchange?</summary>
+      <p>Exchanges › Verification compares Temkin’s numbers with the exchange’s own records and shows where any gap comes from (fees, funding, day start time). You can change when a calendar day starts in Settings.</p>
+    </details>
+    <details><summary>How do I cancel my subscription?</summary>
+      <p>On your iPhone: Settings › your name › Subscriptions › Temkin. Pro stays active until the end of the period. The app reminds you a day before a free trial ends.</p>
+    </details>
+    <details><summary>How do I delete my data?</summary>
+      <p>Temkin › Settings › “Delete all data and keys”. Deleting the app also removes everything. iCloud backup can be turned off in Settings.</p>
+    </details>
+    <p style="margin-top:24px">Something else? Email <a href="mailto:dereli@hoodflow.app?subject=Temkin">dereli@hoodflow.app</a>. We usually reply the same day.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Temkin</span>
+    <a href="privacy.html"><span class="tr">Gizlilik</span><span class="en">Privacy</span></a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"><span class="tr">Kullanım koşulları</span><span class="en">Terms of use</span></a>
+    <a href="mailto:dereli@hoodflow.app?subject=Temkin"><span class="tr">İletişim</span><span class="en">Contact</span></a>
+  </footer>
+</main>
+<script>
+  (function () {
+    var body = document.body;
+    function set(lang) {
+      body.dataset.lang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === lang ? 'true' : 'false'); });
+      try { localStorage.setItem('temkin.lang', lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('temkin.lang'); } catch (e) {}
+    var q = new URLSearchParams(location.search).get('lang');
+    set(q === 'en' || q === 'tr' ? q : saved || ((navigator.language || 'tr').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en'));
+    document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
+  })();
+</script>
+</body>
+</html>
