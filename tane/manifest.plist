@@ -15,7 +15,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key><string>app.hoodflow.tane</string>
-        <key>bundle-version</key><string>1.0</string>
+        <key>bundle-version</key><string>1.0.0</string>
         <key>kind</key><string>software</string>
         <key>title</key><string>Tane</string>
       </dict>
