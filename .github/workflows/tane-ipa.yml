@@ -29,7 +29,7 @@ jobs:
           import plistlib,sys
           d=plistlib.load(open(sys.argv[1],'rb'))
           print('Name', d.get('Name')); print('ExpirationDate', d.get('ExpirationDate'))
-          print('ProvisionedDevices', d.get('ProvisionedDevices'))
+          print('ProvisionedDevices', len(d.get('ProvisionedDevices') or []))
           e=d.get('Entitlements',{}); print('app-id', e.get('application-identifier'), 'get-task-allow', e.get('get-task-allow'))
           PY
           cd "$GITHUB_WORKSPACE" && cp /tmp/Tane.ipa tane/Tane.ipa
