@@ -9,7 +9,7 @@
       <array>
         <dict>
           <key>kind</key><string>software-package</string>
-          <key>url</key><string>https://github.com/dereliapps/dereliapps.github.io/releases/download/tane-test-1/Tane.ipa</string>
+          <key>url</key><string>https://api.codemagic.io/artifacts/.eJwVwUmSgjAAAMC_eKdq2M3BQ4BBCBEiwbBcLAmbooi4EHn91HSvWvjPekjlkej-U_A53Xe5NJSZdxanFuOEj_dPIT2jKzaWmxqZL2aBfJlR1bxdi_NpSkDwIv2gnkqvpBxVPGA7aGcXpwsm1ZXh1SQWf3-p0idpdjkrjqKP7jDEcWJ0rsbfBEb5FLf-VxqlcEu2hJNG6tgDG9gv1NCWx9lLvUaZb6mOxYCsDBdlb6Iah9Qza80DAoFmWUOhgycV8DTYbL7pbVX8GhPQ-g9iBrLh9uAqBf3RaAoSh1XrJN0dy8WMPxUdmfwSeP-A8T2rLWGHd3nXRfRwzf2u3WxWf204YQk.YEAv48hzt_QMa9lSYTE7DQIFfg4</string>
         </dict>
       </array>
       <key>metadata</key>
