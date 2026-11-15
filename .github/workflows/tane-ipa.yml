@@ -1,0 +1,42 @@
+name: tane-ipa
+on:
+  push:
+    paths: [tane/ipa-url.txt]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: IPA indir ve denetle
+        run: |
+          set -e
+          URL=$(tr -d '\r\n ' < tane/ipa-url.txt)
+          curl -fsSL -o /tmp/Tane.ipa "$URL"
+          ls -l /tmp/Tane.ipa; file /tmp/Tane.ipa
+          mkdir -p /tmp/x && cd /tmp/x && unzip -q /tmp/Tane.ipa
+          APP=$(ls -d Payload/*.app)
+          echo "== Info.plist"; python3 - "$APP/Info.plist" <<'PY'
+          import plistlib,sys
+          d=plistlib.load(open(sys.argv[1],'rb'))
+          for k in ['CFBundleIdentifier','CFBundleShortVersionString','CFBundleVersion','MinimumOSVersion','UIDeviceFamily']: print(k, d.get(k))
+          PY
+          echo "== embedded.mobileprovision"
+          openssl smime -inform der -verify -noverify -in "$APP/embedded.mobileprovision" -out /tmp/prof.plist 2>/dev/null || security cms -D -i "$APP/embedded.mobileprovision" > /tmp/prof.plist
+          python3 - /tmp/prof.plist <<'PY'
+          import plistlib,sys
+          d=plistlib.load(open(sys.argv[1],'rb'))
+          print('Name', d.get('Name')); print('ExpirationDate', d.get('ExpirationDate'))
+          print('ProvisionedDevices', d.get('ProvisionedDevices'))
+          e=d.get('Entitlements',{}); print('app-id', e.get('application-identifier'), 'get-task-allow', e.get('get-task-allow'))
+          PY
+          cd "$GITHUB_WORKSPACE" && cp /tmp/Tane.ipa tane/Tane.ipa
+      - name: Depoya ekle
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tane/Tane.ipa
+          git commit -m "Tane.ipa güncellendi" || echo "değişiklik yok"
+          git push
