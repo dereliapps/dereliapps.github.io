@@ -47,10 +47,16 @@ def author_works(wiki, page):
     r = api(wiki, action="parse", prop="links", redirects=1, page=page)
     return [l["*"] for l in r.get("parse", {}).get("links", []) if l.get("ns") == 0 and "exists" in l]
 
+def save(out):
+    for wiki, recs in out.items():
+        json.dump(recs, open(f"tane-texts/out_{wiki}.json", "w"), ensure_ascii=False)
+
 def main():
     req = json.load(open("tane-texts/request.json"))
     out = {}
+    budget = req.get("secondsPerJob", 420)
     for job in req["jobs"]:
+        t0 = time.time()
         wiki, author = job["wiki"], job["author"]
         works = list(job.get("works", []))
         if job.get("authorPage"):
@@ -59,12 +65,13 @@ def main():
         for w in works:
             pages = [w] + subpages(wiki, w)[: job.get("maxSub", 120)]
             for pg in pages:
+                if time.time() - t0 > budget: break
                 ps = paras(wiki, pg)
                 if sum(len(x.split()) for x in ps) >= 80:
                     recs.append({"author": author, "work": w, "page": pg, "paras": ps})
                 time.sleep(0.15)
-        print(wiki, author, len(recs), flush=True)
-    for wiki, recs in out.items():
-        json.dump(recs, open(f"tane-texts/out_{wiki}.json", "w"), ensure_ascii=False)
+            if time.time() - t0 > budget: break
+        print(wiki, author, len(recs), round(time.time() - t0), flush=True)
+        save(out)
 
 main()
