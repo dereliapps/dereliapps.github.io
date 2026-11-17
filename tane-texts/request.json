@@ -1,76 +1,34 @@
 {
+ "secondsPerJob": 1500,
  "jobs": [
-  {
-   "wiki": "ar",
-   "author": "جبران خليل جبران",
-   "works": [
-    "الأجنحة المتكسرة",
-    "دمعة وابتسامة (1914)"
-   ]
-  },
-  {
-   "wiki": "ar",
-   "author": "مصطفى لطفي المنفلوطي",
-   "works": [
-    "النظرات"
-   ]
-  },
-  {
-   "wiki": "pt",
-   "author": "Machado de Assis",
-   "authorPage": "Autor:Machado de Assis",
-   "maxWorks": 60,
-   "maxSub": 30
-  },
-  {
-   "wiki": "pt",
-   "author": "Lima Barreto",
-   "authorPage": "Autor:Lima Barreto",
-   "maxWorks": 25,
-   "maxSub": 40
-  },
-  {
-   "wiki": "pt",
-   "author": "Aluísio Azevedo",
-   "authorPage": "Autor:Aluísio Azevedo",
-   "maxWorks": 20,
-   "maxSub": 40
-  },
-  {
-   "wiki": "pt",
-   "author": "José de Alencar",
-   "authorPage": "Autor:José de Alencar",
-   "maxWorks": 20,
-   "maxSub": 40
-  },
-  {
-   "wiki": "pt",
-   "author": "Raul Pompeia",
-   "authorPage": "Autor:Raul Pompeia",
-   "maxWorks": 10,
-   "maxSub": 40
-  },
-  {
-   "wiki": "pt",
-   "author": "Manuel Antônio de Almeida",
-   "authorPage": "Autor:Manuel Antônio de Almeida",
-   "maxWorks": 5,
-   "maxSub": 60
-  },
   {
    "wiki": "tr",
    "author": "Ömer Seyfettin",
    "authorPage": "Kişi:Ömer Seyfettin",
    "maxWorks": 90,
-   "maxSub": 10
+   "maxSub": 3
   },
   {
-   "wiki": "tr",
-   "author": "Sabahattin Ali",
-   "authorPage": "Kişi:Sabahattin Ali",
+   "wiki": "pt",
+   "author": "Machado de Assis",
+   "works": [
+    "Quincas Borba",
+    "Helena",
+    "Iaiá Garcia",
+    "Esaú e Jacó",
+    "Memorial de Aires",
+    "A mão e a luva",
+    "Ressurreição (Machado de Assis)",
+    "Casa Velha"
+   ],
+   "maxSub": 25
+  },
+  {
+   "wiki": "pt",
+   "author": "Aluísio Azevedo",
+   "authorPage": "Autor:Aluísio Azevedo",
    "maxWorks": 15,
-   "maxSub": 40
+   "maxSub": 25
   }
- ],
- "secondsPerJob": 300
+ ]
 }
